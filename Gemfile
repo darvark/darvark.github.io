@@ -37,3 +37,5 @@ gem "webrick"
 gem "jekyll-remote-theme", "~> 0.4.3"
 
 gem "jekyll-theme-midnight", "~> 0.2.0"
+
+gem "github-pages", "~> 225", group: :jekyll_plugins
