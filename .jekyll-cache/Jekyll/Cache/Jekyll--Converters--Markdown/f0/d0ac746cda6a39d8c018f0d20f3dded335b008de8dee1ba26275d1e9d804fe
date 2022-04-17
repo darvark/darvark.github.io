@@ -1,0 +1,31 @@
+I"�<p><strong>Hi I’m Marcin, and welcome on my small page.</strong></p>
+
+<ul>
+  <li>I’ll post here mostly stuff about ham radio (amateur radio) and my IT projects, that are in most cases connected to Python and DevOps stuff.</li>
+</ul>
+
+<p>I’m licensed amateur radio operator since 2016 and I’m leading small Ham Radio Club since 2018.
+My equipment:</p>
+<ul>
+  <li>Kenwood TS-870S</li>
+  <li>Anytone AT-778UV</li>
+  <li>Yaesu FT-4XE</li>
+  <li>Horizontal Delta loop antenna (desing by SP7LA)</li>
+  <li>Diamond X200N</li>
+  <li>Diamond GSV3000</li>
+</ul>
+
+<p>I’m working mostly on SSB, and still learning CW - I completed Basic, Beginner and Intermediate level of CWOps Academy</p>
+
+<p>You can find me on band during many contests, sometimes using my own call sign <strong>SP6MI</strong>, sometimes as a member of club representation <strong>SN6E</strong></p>
+
+<hr />
+
+<p>Since most of my career I worked as an Devops engineer I love scripting languages. My favorites are <strong>Python</strong> and <strong>Bash</strong>. At least those were/are most popular in my projects.</p>
+
+<p>Currently I’m digging into <strong>Anisble</strong> and <strong>Terraform</strong> which seems to be great tools.</p>
+
+<hr />
+
+<p>On my Github page you can find my own (not finished yet) implementation of Hamradio contesting software. It’s as simple as can be, but still some of functionalities are not finished. It has been written in <strong>C++</strong> and <strong>QT5</strong> framework.</p>
+:ET

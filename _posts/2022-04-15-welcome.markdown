@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Welcome!"
+date:   2022-04-15 11:55:14
+author: Marcin SP6MI
+---
+Page is hosted on [GitHub](https://github.com) and created by Jekyll. It uses [Midnight](https://github.com/pages-themes/midnight) theme.
+
+It's my third or fourth attempt to create personal blog about. This time I have a plan... smart plan what I want to publish here and how.
+
+Temporary it's on github pages, later maybe I'll move it somewhere elese with better domain. Still title of this page and final domain needs to be choosen.
+
+- For sure here I'll post lots of code snipepts and thoughs about ham radio, PZK (Polish National Amateur Radio Assotiation).

@@ -1,0 +1,12 @@
+---
+layout: defaults
+---
+<ul>
+  {% for post in site.posts %}
+  {% assign date = post.date | split: " " %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }} {{ date[0] }} {{ date[1] }}</a>
+      <!-- {{ post.excerpt }} -->
+    </li>
+  {% endfor %}
+</ul>
