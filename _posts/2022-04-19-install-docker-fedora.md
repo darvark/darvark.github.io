@@ -50,12 +50,12 @@ systemctl start docker
 
 # run test image
 docker run hello-world
-{ %endhighlight %}
+{% endhighlight %}
 
 To be able to use docker as non-root user you have to add user account to docker group.
 
 {% highlight bash %}
 usermod -a -G docker $USER
-{ %endhighlight %}
+{% endhighlight %}
 
 Soon I'll publish more instruction how to play with docker and kubernetes on you won home lab.
