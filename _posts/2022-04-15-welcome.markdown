@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  "Welcome!"
+title:  "Zaczynamy!"
 date:   2022-04-15 11:55:14
 author: Marcin SP6MI
 ---
-Page is hosted on [GitHub](https://github.com) and created by Jekyll. It uses [Midnight](https://github.com/pages-themes/midnight) theme.
+Strona hostowana na serwisie [GitHub](https://github.com) i stworzona przy użyciu silnika Jekyll, z wykorzystaniem motywu [Midnight](https://github.com/pages-themes/midnight).
 
-It's my third or fourth attempt to create personal blog about. This time I have a plan... smart plan what I want to publish here and how.
+Tak naprawdę to moja kolejna próba stworzenia czegoś w stylu bloga, czy strony, na której będę publikować materiały moje autorstwa. Tak jak wspomniałem obecnie strona jest hostowana na githubie, może kiedyś w przyszłości przeniosę ją na dedykowany serwer.
 
-Temporary it's on github pages, later maybe I'll move it somewhere elese with better domain. Still title of this page and final domain needs to be choosen.
-
-- For sure here I'll post lots of code snipepts and thoughs about ham radio, PZK (Polish National Amateur Radio Assotiation).
+Z pewnością na stronie będę starał się umieszczać fragmenty kodu oraz krótkie teksty poświęcone DevOps i krótkofalarstwa.

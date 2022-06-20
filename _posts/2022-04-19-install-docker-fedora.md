@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "Install docker on Fedora Server 35"
+title:  "Instalacja dockera na Fedora Server 35"
 date:   2022-04-19
 author: Marcin SP6MI
 ---
 
-Installing **docker** on Fedora Server 35 is no a rocket science1. Just few simple steps and you can start using latest docker on your server.
+Instalacja **docker** na Fedora Server 35 nie jest czymś wyjątkowo skomplikowanym. WYkonanie kilku dość prostych kroków umożliwi Ci korzystanie z dockera na Twoim serwerze.
 
-First we have to enable and add some additional servers to our **dnf** configuration.
+Na wstępie musimy aktywować i dodać kilka dodatkowyc serwerów do konfiguracji **dnf**.
 
-Please remeber that those operations must be excuted as root - (sudo or su -)
+Pamiętaj, że poniższe operacje musisz wykonywać jako root - bez znaczenia przy użyjesz do tego `sudo` czy `su -`.
 
-At first please ensure that all previous installations were removed
+Na wstępie upewnijmy się, że poprzednie instalacje zostały w pełni usunięte
 
 {% highlight bash %}
 dnf remove docker \
@@ -27,35 +27,33 @@ dnf remove docker \
 {% endhighlight %}
 
 {% highlight bash %}
-# install additional dnf plugin
+# Instalowanie dodatkowych pluginów dnf
 dnf install dnf-plugins-core
 
-# add official docker repository_url
+# Dodanie oficjalnego repozytorium dockera
 dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
-# enable docker repositories
+# Aktywacja repozytorium dockera
 # docker-ce-test repository is optional
 dnf config-manager --set-enabled docker-ce-nightly
 dnf config-manager --set-enabled docker-ce-test
 
-# install docker
+# Instalacja dockera
 dnf install docker-ce docker-ce-cli containerd.io
 {% endhighlight %}
 
-Now we can start docker service and run test docker image
+Teraz możemy uruchomić usługę dockera i uruchomić testowy obraz
 
 {% highlight bash %}
-# enable service
+# Uruchomie usługi
 systemctl start docker
 
-# run test image
+# Uruchomienie testowego obrazu image
 docker run hello-world
 {% endhighlight %}
 
-To be able to use docker as non-root user you have to add user account to docker group.
+Aby móc korzystać z dockera jako zwykły użytkownik należy dodać danego użytkownika do grupy `docker`.
 
 {% highlight bash %}
 usermod -a -G docker $USER
 {% endhighlight %}
-
-Soon I'll publish more instruction how to play with docker and kubernetes on you won home lab.
