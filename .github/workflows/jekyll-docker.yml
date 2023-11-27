@@ -38,10 +38,10 @@ jobs:
     - name: Download artifacts
       uses: actions/download-artifact@v2
       with:
-        name: /home/runner/work/strona.tgz
+        name: strona
 
     - name: Extract
-      run: tar zxvf /home/runner/work/strona.tgz
+      run: tar zxvf strona.tgz
 
     - name: ftp-action
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
