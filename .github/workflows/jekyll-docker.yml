@@ -51,8 +51,7 @@ jobs:
       uses: pressidium/lftp-mirror-action@v1
       with:
         # SFTP credentials
-        host: ${{ secrets.OVH_URL }}
-        port: 22
+        host: ${{ secrets.OVH_FTP }}
         user: ${{ secrets.OVH_USER }}
         pass: ${{ secrets.OVH_PASS }}
         # lftp settings
