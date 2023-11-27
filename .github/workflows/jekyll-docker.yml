@@ -44,12 +44,19 @@ jobs:
       run: tar zxvf strona.tgz --strip-components 5
 
     - name: ftp-action
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.OVH_FTP }}
-        username: ${{ secrets.OVH_USER }}
-        password: ${{ secrets.OVH_PASS }}
-        protocol: ftp
-        port: 21 # todo replace with your web host
-        server-dir: www/
+      run: | 
+        lftp -c "set ftp:list-options -a; \
+        open ftp://${{ OVH_USER }}:${{ OVH_PASS }}@${{ OVH_URL }}; \
+        lcd ./www; \
+        cd ${{ github.workspace }}; \
+        mirror --reverse --delete --use-cache --verbose --allow-chown  \
+        --allow-suid --no-umask --parallel=2 --exclude-glob .git"
+      # uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      # with:
+      #   server: ${{ secrets.OVH_FTP }}
+      #   username: ${{ secrets.OVH_USER }}
+      #   password: ${{ secrets.OVH_PASS }}
+      #   protocol: ftp
+      #   port: 21 # todo replace with your web host
+      #   server-dir: www/
 
