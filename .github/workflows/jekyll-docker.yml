@@ -23,7 +23,10 @@ jobs:
       run: rm -rf /home/runner/work/strona.zip
       
     - name: Archive
-      run: zip /home/runner/work/strona.zip ${{ github.workspace }}
+      run: pushd ${{ github.workspace }} &&
+           zip -r /path/to/out.zip ./ &&
+           popd
+           # zip /home/runner/work/strona.zip ${{ github.workspace }}
 
     - name: Artifact
       uses: actions/upload-artifact@v2
