@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Rumcajs
-email: sp6mi@protonmail.com
+title: SP6MI
+email: sp6mi@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
-  About ham radio and my IT projects
+  Amateur radio and DevOps stuff
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "darvark.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: sp6mi
+url: "sp6mi.pl" # the base hostname & protocol for your site, e.g. http://example.com
+
 github_username:  darvark
 show_downloads: false
 
