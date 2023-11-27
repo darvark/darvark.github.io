@@ -22,8 +22,9 @@ jobs:
     - name: ftp-action
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.OVH_URL }}
+        server: ${{ secrets.OVH_FTP }}
         username: ${{ secrets.OVH_USER }}
         password: ${{ secrets.OVH_PASS }}
         protocol: ftp
         port: 21 # todo replace with your web host
+        server-dir: www/
