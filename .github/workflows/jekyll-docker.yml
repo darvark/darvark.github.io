@@ -46,7 +46,7 @@ jobs:
     - name: ftp-action
       run: | 
         lftp -c "set ftp:list-options -a; \
-        open ftp://${{ OVH_USER }}:${{ OVH_PASS }}@${{ OVH_URL }}; \
+        open ftp://${{ secrets.OVH_USER }}:${{ secrets.OVH_PASS }}@${{ secrets.OVH_URL }}; \
         lcd ./www; \
         cd ${{ github.workspace }}; \
         mirror --reverse --delete --use-cache --verbose --allow-chown  \
