@@ -60,7 +60,7 @@ jobs:
         name: strona
 
     - name: Extract
-      run: tar zxvf strona.tgz --strip-components 1
+      run: tar zxvf strona.tgz --strip-components 2
 
     - name: ftp-action
       uses: pressidium/lftp-mirror-action@v1
@@ -76,5 +76,5 @@ jobs:
         localDir: '.'
         remoteDir: 'www/'
         reverse: true
-        ignoreFile: '.git'
+        ignoreFile: '.git, strona.tgz'
         options: '--verbose'
