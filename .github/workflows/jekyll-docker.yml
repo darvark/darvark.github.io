@@ -20,16 +20,16 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: Rem old artifact
-      run: rm -rf /home/runner/work/strona.zip
+      run: rm -rf /home/runner/work/strona.tgz
       
     - name: Archive
-      run: zip /home/runner/work/strona.zip ${{ github.workspace }}
+      run: tar -cvzf /home/runner/work/strona.tgz ${{ github.workspace }}
 
     - name: Artifact
       uses: actions/upload-artifact@v2
       with:
         name: strona
-        path: /home/runner/work/strona.zip
+        path: /home/runner/work/strona.tgz
 
   deploy:
     needs: ['build']
@@ -41,7 +41,7 @@ jobs:
         name: strona
 
     - name: Extract
-      run: unzip -j strona.zip
+      run: tar vxjf strona.tgz --strip-components 3
 
     - name: ftp-action
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -52,4 +52,4 @@ jobs:
         protocol: ftp
         port: 21 # todo replace with your web host
         server-dir: www/
-        local-dir: ${{ github.workspace }}/
+
