@@ -23,16 +23,13 @@ jobs:
       run: rm -rf /home/runner/work/strona.zip
       
     - name: Archive
-      run: pushd ${{ github.workspace }} &&
-           zip -r /path/to/out.zip ./ &&
-           popd
-           # zip /home/runner/work/strona.zip ${{ github.workspace }}
+      run: zip ../strona.zip ${{ github.workspace }}
 
     - name: Artifact
       uses: actions/upload-artifact@v2
       with:
         name: strona
-        path: /home/runner/work/strona.zip
+        path: ../strona.zip
 
   deploy:
     needs: ['build']
