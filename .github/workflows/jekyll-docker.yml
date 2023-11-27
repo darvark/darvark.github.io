@@ -23,7 +23,7 @@ jobs:
       run: rm -rf strona.tgz
       
     - name: Archive
-      run: tar --exclude='strona.tgz' -cvzf strona.tgz ${{ github.workspace }}
+      run: tar --exclude='strona.tgz' --exclude='.git' -cvzf strona.tgz .
 
     - name: Artifact
       uses: actions/upload-artifact@v2
