@@ -3,6 +3,7 @@ layout: post
 title:  "Instalacja dockera na Fedora Server 35"
 date:   2022-04-19
 author: Marcin SP6MI
+image: /assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg
 ---
 
 Instalacja **docker** na Fedora Server 35 nie jest czymś wyjątkowo skomplikowanym. WYkonanie kilku dość prostych kroków umożliwi Ci korzystanie z dockera na Twoim serwerze.
