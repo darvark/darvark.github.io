@@ -44,16 +44,12 @@ jobs:
       run: unzip -j strona.zip
 
     - name: ftp-action
-      run: lftp -u ${{ secrets.OVH_USER }},${{ secrets.OVH_PASS }} -c "
-          open ${{ secrets.OVH_FTP }} &&
-          cd www/ &&
-          mirror -R --delete -v" 
-      # uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      # with:
-      #   server: ${{ secrets.OVH_FTP }}
-      #   username: ${{ secrets.OVH_USER }}
-      #   password: ${{ secrets.OVH_PASS }}
-      #   protocol: ftp
-      #   port: 21 # todo replace with your web host
-      #   server-dir: www/
-      #   local-dir: ${{ github.workspace }}/
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.OVH_FTP }}
+        username: ${{ secrets.OVH_USER }}
+        password: ${{ secrets.OVH_PASS }}
+        protocol: ftp
+        port: 21 # todo replace with your web host
+        server-dir: www/
+        local-dir: ${{ github.workspace }}/
