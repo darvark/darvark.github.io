@@ -20,7 +20,7 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: Rem old artifact
-      run: rm -rf strona.tgz
+      run: rm -rf /home/runner/work/strona.tgz
       
     - name: Archive
       run: tar --exclude='strona.tgz' --exclude='.git' -cvzf /home/runner/work/strona.tgz ${{ github.workspace }}
