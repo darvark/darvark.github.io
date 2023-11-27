@@ -32,3 +32,4 @@ jobs:
         protocol: ftp
         port: 21 # todo replace with your web host
         server-dir: www/
+        local-dir: ${{ github.workspace }}
