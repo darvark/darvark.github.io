@@ -48,13 +48,22 @@ jobs:
       run: tar zxvf strona.tgz --strip-components 5
 
     - name: ftp-action
-      run: | 
-       lftp -c "
-          open ftp://${{ secrets.OVH_USER }}:${{ secrets.OVH_PASS }}@${{ secrets.OVH_URL }} &&
-          mkdir www/ &&
-          cd www/ &&
-          mirror -R --delete -v
-        "
+      uses: pressidium/lftp-mirror-action@v1
+      with:
+        # SFTP credentials
+        host: ${{ secrets.OVH_URL }}
+        port: 22
+        user: ${{ secrets.OVH_USER }}
+        pass: ${{ secrets.OVH_PASS }}
+        # lftp settings
+        onlyNewer: true
+        settings: 'sftp:auto-confirm=yes'
+        # Mirror command options
+        localDir: '.'
+        remoteDir: 'www/'
+        reverse: true
+        ignoreFile: '.git'
+        options: '--verbose'
       
       # uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       # with:
