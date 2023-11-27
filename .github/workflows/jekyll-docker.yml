@@ -45,20 +45,6 @@ jobs:
         with:
           name: strona
           path: /home/runner/work/strona.tgz
-      # - name: Upload artifact
-        # uses: actions/upload-pages-artifact@v2
-
-  # Deployment job
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v2
 
   deploy_ftp:
     needs: ['build']
@@ -74,7 +60,7 @@ jobs:
         name: strona
 
     - name: Extract
-      run: tar zxvf strona.tgz #--strip-components 5
+      run: tar zxvf strona.tgz --strip-components 1
 
     - name: ftp-action
       uses: pressidium/lftp-mirror-action@v1
@@ -92,13 +78,3 @@ jobs:
         reverse: true
         ignoreFile: '.git'
         options: '--verbose'
-      
-      # uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      # with:
-      #   server: ${{ secrets.OVH_FTP }}
-      #   username: ${{ secrets.OVH_USER }}
-      #   password: ${{ secrets.OVH_PASS }}
-      #   protocol: ftp
-      #   port: 21 # todo replace with your web host
-      #   server-dir: www/
-
