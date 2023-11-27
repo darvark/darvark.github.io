@@ -18,13 +18,16 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
     - name: Archive
-      run: tar -cvzf strona.tgz .
+      run: tar -cvzf strona.tgz ${{ github.workspace }}
+
     - name: Artifact
       uses: actions/upload-artifact@v2
       with:
         name: strona
         path: strona.tgz
+
   deploy:
     needs: ['build']
     runs-on: ubuntu-latest
@@ -33,8 +36,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: strona.tgz
+
     - name: Extract
       run: tar zxvf strona.tgz
+
     - name: ftp-action
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
