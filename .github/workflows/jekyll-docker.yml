@@ -41,7 +41,7 @@ jobs:
         name: strona
 
     - name: Extract
-      run: tar zxjf strona.tgz --strip-components 4
+      run: tar zxvf strona.tgz --strip-components 4
 
     - name: ftp-action
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
