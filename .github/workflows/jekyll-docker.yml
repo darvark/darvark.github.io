@@ -49,12 +49,13 @@ jobs:
 
     - name: ftp-action
       run: | 
-        lftp -c "set ftp:list-options -a; \
-        open ftp://${{ secrets.OVH_USER }}:${{ secrets.OVH_PASS }}@${{ secrets.OVH_URL }}; \
-        lcd ./www; \
-        cd ${{ github.workspace }}; \
-        mirror --reverse --delete --use-cache --verbose --allow-chown  \
-        --allow-suid --no-umask --parallel=2 --exclude-glob .git"
+       lftp -c "
+          open ftp://${{ secrets.OVH_USER }}:${{ secrets.OVH_PASS }}@${{ secrets.OVH_URL }} &&
+          mkdir www/ &&
+          cd www/ &&
+          mirror -R --delete -v
+        "
+      
       # uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       # with:
       #   server: ${{ secrets.OVH_FTP }}
