@@ -20,19 +20,10 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: ftp-action
-      # You may pin to the exact commit or the version.
-      # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
-      uses: sebastianpopp/ftp-action@v2.0.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        # FTP host
-        host: ${{ secrets.OVH_URL }}
-        # FTP user
-        user: ${{ secrets.OVH_USER }}
-        # FTP password
+        server: ${{ secrets.OVH_URL }}
+        username: ${{ secrets.OVH_USER }}
         password: ${{ secrets.OVH_PASS }}
-        # Force SSL encryption
-        forceSsl: false
-        # Local directory
-        localDir: .
-        # Remote directory
-        remoteDir: .
+        protocol: ftp
+        port: 21 # todo replace with your web host
