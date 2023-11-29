@@ -1,5 +1,5 @@
 ---
-title:  Contests certificates
+title:  Dyplomy i Certyfikaty
 tags:
   - ham
   - contest
@@ -14,6 +14,7 @@ images:
   - https://images.unsplash.com/photo-1500402448245-d49c5229c564?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f19c590b253f803a7f9b643c59017160&auto=format&fit=crop&w=1650&q=80
 ---
 
+# Chwilowo zdjęcia zserwisu unsplash.com
 
 Dyplomy oraz certyfikaty z zawodów krótkofalarskich.
 Kliknij na zdięcie aby otworzyć w powiększeniu.
