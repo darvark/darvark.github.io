@@ -7,16 +7,17 @@ tags: [Page]
 ---
 I'll post here mostly stuff about ham radio (amateur radio) and my IT projects, that are in most cases connected to Python and DevOps stuff.
 
-I'm licensed amateur radio operator since 2016 and I'm leading small Ham Radio Club since 2018.
-My equipment:
+Licencję uzyskałem w połowie 2016 roku, od samego początku nadaję pod znakiem **SP6MI**, od 2018 roku pełnię funkcję prezesa Wrocławskiego Klubu Krótkofalwoców **SP6PWS**.
+
+Najczęściej usłyszycie mnie podczas większych zawodów, czy to pod moim znakiem czy też jako jeden z operatorów znaku **SP6PWS** lub **SN6E**.
+
+W moim shack-u:
 - Icom IC-7410
 - Anytone AT-778UV
 - Yaesu FT-4XE
-- Horizontal Delta loop antenna (design by SP7LA)
+- Delta (bazująca na konstrukcji SP7LA)
 - Diamond X200N
 - Diamond GSV3000
-- 2 element beam for 15/10m band
+- 2 elementowy beam na pasma 15/10m
 
- I'm working mostly on SSB, and still learning CW - I completed Basic, Beginner and Intermediate level of CWOps Academy
-
-You can find me on band during many contests, sometimes using my own call sign **SP6MI**, sometimes as a member of club representation **SN6E**
+Głównie pracuję na SSB, ale wciąz ucze się CW
