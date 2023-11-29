@@ -2,7 +2,7 @@
 layout: defaults/page
 permalink: index.html
 narrow: true
-title: Amateur radio and DevOps stuff
+title: Krótkofalarstwo i informatyka z punktu widzenia DevOps
 ---
 
 <!-- ## What is it?
