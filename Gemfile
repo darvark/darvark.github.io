@@ -1,6 +1,12 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-# 'github-pages' includes 'jekyll' gem 
-gem 'github-pages'
-gem 'bourbon'
-gem 'jemoji'
+source "https://rubygems.org"
+
+gem "webrick", "~> 1.7"
+gem "rouge", "~> 3.26"
+gem "kramdown-parser-gfm", "~> 1.1"
+gem "jekyll", "~> 4.2"
+
+group :development do
+    gem "jekyll-watch", "~> 2.2"
+end

@@ -1,35 +1,74 @@
-# Build settings
-gems:
-  - jemoji
-  - jekyll-paginate
+# Outputting
+permalink: /:categories/:year/:month/:day/:title.html
 
-# Site settings
-title: "SP6MI"
-description: > # this means to ignore newlines until "email:"
-   Krótkofalarstwo i projekty IT
+# Conversion
+markdown:         kramdown
+highlighter:      rouge
+excerpt_separator: <!--more-->
 
-email: sp6mi@proton.me
-#blog logo
+# Config for your profile.
+title:            SP6MI            # Site title
+name:             Marcin SP6MI            # Your name
+avatar:           /theme/img/avatar.jpg   # Path to an avatar image
 
-
-# blog cover
-cover: "/assets/images/ic7410-2.jpg"
-
-name: 'Marcin I'
-author: 'Marcin I'
-# author_image: "/assets/images/author.jpg"
-
-paginate:	5
-
-url: "darvark.github.io" # the base hostname & protocol for your site
+# The theme uses the baseurl throughout, which is useful for running the entire
+# site under a subdir, like for this GitHub Pages deployment as a project site.
+# Use "" when runnign the site out of the root of a domain.
 baseurl: ""
-#used to display twitter cards
 
-# social icons and sharing options
-social:
-  - icon:	github
-    url:	https://github.com/darvark
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
+# Add a directory to hold misc pages, just to keep the root directory clean.
+include: ["_pages", "_portfolio"]
+
+# Wire in the SASS files in the theme directory.
+sass:
+  sass_dir: theme/_sass
+  style: compressed
+
+# Turn the projects into a collection.
+collections:
+  projects:
+    output: true
+    title: Projects
+    permalink: /:collection/:name.html
+  portfolio:
+    output: true
+    title: portfolio
+    permalink: /:collection/:name.html
+
+defaults:
+# Turn the profile sidebar on for all pages by default, except for the
+# collections, where it is off and replaced by useful things on the sidebar.
+# To override this one a page, use
+#    show_profile: false
+# to hide the profile.
+  -
+    scope:
+      path: ""
+    values:
+      show_profile: true
+  -
+    scope:
+      path: "_posts"
+    values:
+      show_profile: false
+      layout: defaults/post
+  -
+    scope:
+      path: "_portfolio"
+    values:
+      show_profile: false
+      layout: defaults/portfolio
+  -
+    scope:
+      path: "_projects"
+    values:
+      show_profile: false
+      layout: defaults/project
+  -
+    scope:
+      path: "list"
+    values:
+      show_profile: false
+      layout: defaults/list
+
+
