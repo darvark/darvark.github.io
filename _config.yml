@@ -1,74 +1,57 @@
-# Outputting
-permalink: /:categories/:year/:month/:day/:title.html
-
-# Conversion
-markdown:         kramdown
-highlighter:      rouge
-excerpt_separator: <!--more-->
-
-# Config for your profile.
-title:            SP6MI            # Site title
-name:             Marcin SP6MI            # Your name
-avatar:           /theme/img/avatar.jpg   # Path to an avatar image
-
-# The theme uses the baseurl throughout, which is useful for running the entire
-# site under a subdir, like for this GitHub Pages deployment as a project site.
-# Use "" when runnign the site out of the root of a domain.
+# SITE CONFIGURATION
 baseurl: ""
+url: "https://sp6mi.pl"
 
-# Add a directory to hold misc pages, just to keep the root directory clean.
-include: ["_pages", "_portfolio"]
+# THEME-SPECIFIC CONFIGURATION
+title: SP6MI                                    # site's title
+description: "Krótkofalarstwo i Devops"      # used by search engines
+avatar: assets/img/avatar.png                         # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
 
-# Wire in the SASS files in the theme directory.
-sass:
-  sass_dir: theme/_sass
-  style: compressed
+# Header and footer text
+header_text: Na styku krótkofalarstwa i informatyki   # Change Blog header text
+header_feature_image: assets/img/header/triangular.jpeg
+header_feature_image_responsive: true
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-# Turn the projects into a collection.
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
+
+# Features
+# More in the _data folder for share buttons, author and language
+# For layout customization, go to the "_sass > base" folder, and check "_variables.scss"
+katex: true                                             # Enable if using math markup
+mermaid: default                                        # Enable mermaid-js for diagrams, use theme: base, forest, dark, default, neutral
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+cookie_consent: false                                   # To respect the usage of cookies
+color_theme: auto                                       # auto, dark or light
+
+# Comments
+comments:
+  disqus_shortname:                                     # Your discus shortname for comments
+  cusdis_app_id:                                        # Your cusdis data-app-id
+  utterances:                                           # Enable by filling below information. For more info, go to https://utteranc.es
+    repo:                                               # your public comments repository (e.g. owner/repo)
+    issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
+
+# PAGINATION
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# PORTFOLIO
 collections:
-  projects:
-    output: true
-    title: Projects
-    permalink: /:collection/:name.html
   portfolio:
     output: true
-    title: portfolio
-    permalink: /:collection/:name.html
+    permalink: /:collection/:name
 
-defaults:
-# Turn the profile sidebar on for all pages by default, except for the
-# collections, where it is off and replaced by useful things on the sidebar.
-# To override this one a page, use
-#    show_profile: false
-# to hide the profile.
-  -
-    scope:
-      path: ""
-    values:
-      show_profile: true
-  -
-    scope:
-      path: "_posts"
-    values:
-      show_profile: false
-      layout: defaults/post
-  -
-    scope:
-      path: "_portfolio"
-    values:
-      show_profile: false
-      layout: defaults/portfolio
-  -
-    scope:
-      path: "_projects"
-    values:
-      show_profile: false
-      layout: defaults/project
-  -
-    scope:
-      path: "list"
-    values:
-      show_profile: false
-      layout: defaults/list
+# BUILD SETTINGS
+sass:
+  style: compressed
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", ".jekyll-metadata", ".idea", "vendor/*", "assets/node_modules/*"]
 
-
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
