@@ -5,7 +5,7 @@ permalink: /about/
 feature-img: "assets/img/pexels/travel.jpeg"
 tags: [Page]
 ---
-- I'll post here mostly stuff about ham radio (amateur radio) and my IT projects, that are in most cases connected to Python and DevOps stuff.
+I'll post here mostly stuff about ham radio (amateur radio) and my IT projects, that are in most cases connected to Python and DevOps stuff.
 
 I'm licensed amateur radio operator since 2016 and I'm leading small Ham Radio Club since 2018.
 My equipment:

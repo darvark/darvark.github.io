@@ -1,5 +1,5 @@
 ---
-title:  Github actions - build and deploy
+title:  Github actions - budowanie i dostarczenie
 tags:
   - github
   - actions
