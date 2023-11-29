@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Zaczynamy!"
+date:   2022-04-15 11:55:14
+author: Marcin SP6MI
+image: /assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg
+---
+Strona hostowana na serwisie [GitHub](https://github.com) i stworzona przy użyciu silnika Jekyll, z wykorzystaniem motywu [Midnight](https://github.com/pages-themes/midnight).
+
+Tak naprawdę to moja kolejna próba stworzenia czegoś w stylu bloga, czy strony, na której będę publikować materiały moje autorstwa. Tak jak wspomniałem obecnie strona jest hostowana na githubie, może kiedyś w przyszłości przeniosę ją na dedykowany serwer.
+
+Z pewnością na stronie będę starał się umieszczać fragmenty kodu oraz krótkie teksty poświęcone DevOps i krótkofalarstwa.

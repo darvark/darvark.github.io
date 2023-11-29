@@ -4,12 +4,10 @@ title:  "Akcje na githubie"
 date:   2022-04-15 11:55:14
 author: Marcin SP6MI
 image: /assets/article_images/2023-11-27-akcje-github/akcje.png
-tag: [linux, github, cicd]
-category: devops
 ---
 
-Poniżej znajdziecie kompletną definicję `wokflow` dla github actions, która pozwoli Wam zbudować serwis oparty na Jekyll, 
-oraz wyśle uzyskane artefakty na serwer ftp, w tym przypadku SFTP. 
+Poniżej znajdziecie kompletną definicję `wokflow` dla gthub actions, która pozwoli Wam zbudować serwis oparty na Jekyll, 
+oraz wyśle uzyskane artefakty na serwer ftp, w tym przypadku SFTP.
 
 Zanim zaczniemy niezbędne jest zdefiniowanie 3 sekretów w ustawieniach projektu. W moim przypadku są to `ftp_url`, `ftp_user`, `ftp_password`.
 Ustawiamy je w `<projekt>/settings/secrets/actions`.
