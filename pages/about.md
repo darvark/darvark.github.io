@@ -5,7 +5,6 @@ permalink: /about/
 feature-img: "assets/img/pexels/travel.jpeg"
 tags: [Page]
 ---
-I'll post here mostly stuff about ham radio (amateur radio) and my IT projects, that are in most cases connected to Python and DevOps stuff.
 
 Licencję uzyskałem w połowie 2016 roku, od samego początku nadaję pod znakiem **SP6MI**, od 2018 roku pełnię funkcję prezesa Wrocławskiego Klubu Krótkofalwoców **SP6PWS**.
 
@@ -20,4 +19,4 @@ W moim shack-u:
 - Diamond GSV3000
 - 2 elementowy beam na pasma 15/10m
 
-Głównie pracuję na SSB, ale wciąz ucze się CW
+Głównie pracuję na SSB, ale wciąz uczę się CW i z małą pomocą techniki startuję w zawodach CW czy też MIX
