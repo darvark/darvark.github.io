@@ -9,7 +9,7 @@ tags:
 ---
 Tm krótkim wpisem chcę zacząć małą serię dotyczącą bardzodobrego, choć wyjatkowo trudnego w obsłudze (szczególnie dla początkujących) programu jakim jest `TLF`. Kolejno przedstawię sam program, sposoby jego instalacji, konfiguracji i pokażę jak go wygodnie używać.
 
-![TLF](assets/2023-12-06/Wstep-do-tlf/tlf1.png)
+![TLF](assets/2023-12-06-Wstep-do-tlf/tlf1.png)
 
 Sam `tlf` jest dość starym programem, bazującym na starym dosowym programie `TR-Log`. Obecnie aplikacja wspiera pracę w największych zawodach CQWW, CQ-WPX, ARRL-DX, ARRL-FD, PACC, oraz EU SPRINT. Jednocześnie umożliwia definiowane reguł pod mniejsze mniej popularne zawody krótkofalarskie.
 
