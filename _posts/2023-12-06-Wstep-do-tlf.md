@@ -7,7 +7,7 @@ tags:
   - logger
   - contesting
 ---
-Tm krótkim wpisem chcę zacząć małą serię dotyczącą bardzodobrego, choć wyjatkowo trudnego w obsłudze (szczególnie dla początkujących) programu jakim jest `TLF`. Kolejno przedstawię sam program, sposoby jego instalacji, konfiguracji i pokażę jak go wygodnie używać.
+Tm krótkim wpisem chcę zacząć małą serię dotyczącą bardzo dobrego, choć wyjatkowo trudnego w obsłudze (szczególnie dla początkujących) programu jakim jest `TLF`. Kolejno przedstawię sam program, sposoby jego instalacji, konfiguracji i pokażę jak go wygodnie używać.
 
 ![TLF](assets/2023-12-06-Wstep-do-tlf/tlf1.jpg)
 
