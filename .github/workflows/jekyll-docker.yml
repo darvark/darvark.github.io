@@ -45,36 +45,3 @@ jobs:
         with:
           name: strona
           path: /home/runner/work/strona.tgz
-
-  deploy_ftp:
-    needs: ['build']
-    runs-on: ubuntu-latest
-    steps:
-    - name: Install lftp
-      run: |
-        sudo apt install lftp -y
-    
-    - name: Download artifacts
-      uses: actions/download-artifact@v2
-      with:
-        name: strona
-
-    - name: Extract
-      run: tar zxvf strona.tgz --strip-components 2
-
-    - name: ftp-action
-      uses: pressidium/lftp-mirror-action@v1
-      with:
-        # SFTP credentials
-        host: ${{ secrets.OVH_FTP }}
-        user: ${{ secrets.OVH_USER }}
-        pass: ${{ secrets.OVH_PASS }}
-        # lftp settings
-        onlyNewer: true
-        settings: 'sftp:auto-confirm=yes'
-        # Mirror command options
-        localDir: '.'
-        remoteDir: 'www/'
-        reverse: true
-        ignoreFile: '.git, strona.tgz'
-        options: '--verbose'

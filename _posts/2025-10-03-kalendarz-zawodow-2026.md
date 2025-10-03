@@ -5,6 +5,9 @@ date: 2025-10-01
 description: Zgłoszenia do kalendarza zawodów PZK - na rok 2026
 img: kalendarz.jpg # Add image post (optional)
 tags: [spcm] # add tag
+read_time: true
+show_date: true
+author: PZK
 ---
 
 Ruszyło przyjmowanie zgłoszeń do kalendarza zawodów PZK na rok 2026.

@@ -5,6 +5,9 @@ date: 2025-10-02
 description: Podsumowanie akcji dyplomowej "Polish Wings in the Battle of Britain."
 img: Diploma_Main.png # Add image post (optional)
 tags: [akcja dyplomowa, award] # add tag
+read_time: true
+show_date: true
+author: PZK
 ---
 
 28 września zakończyła się kolejna duża akcja dyplomowa, która połączyła dwa brytyjskie kluby krótkofalowców - zrzeszajace Polaków mieszkajacych na wyspach - z operatorami z Polski. Akcja zainicjowana przez członków klubów M0SQC oraz M0KKN została zorganizowana przy czynnym udziale Polskiego Związku Krótkofalowców. 
