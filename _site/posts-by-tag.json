@@ -23,12 +23,42 @@
     
       
   {
+  "tag" : "dx",
+  "posts" : [
+      
+      "./dx-trophy-wyniki.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "spcm",
   "posts" : [
       
       "./kalendarz-zawodow-2026.html",
       
       "./czesciowe-spcm.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "spdx",
+  "posts" : [
+      
+      "./dx-trophy-wyniki.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "współzawodnictwo",
+  "posts" : [
+      
+      "./dx-trophy-wyniki.html"
       
     ]
   } 

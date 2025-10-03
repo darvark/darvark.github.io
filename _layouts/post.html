@@ -18,7 +18,7 @@ layout: default
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     {% include schema-meta.html %}
     <div class="page-image">
-      <div class="cover-image" style="background: url('{{ relativebase }}assets/img/{{ page.img }}') center no-repeat; background-size: cover;"></div>
+      <div class="cover-image" style="background: url('{{ relativebase }}assets/img/{{ page.img }}') center no-repeat; background-size: 75%;"></div>
     </div>
     <div class="wrapper">
       <div class="page-content">
@@ -28,17 +28,13 @@ layout: default
         </div>
         {% include sidebar.html context="post" class="side" id="sidebar" %}
         {% if page.toc %}{% include sidebar-toc.html %}{% endif %}
-        {% include github-button.html %}
         {{page.content | markdownify}}
         {% include sidebar.html context="post" class="inline" id="post-end" %}
         <div class="separator"></div>
         {% include author-box.html %}
         {% include recent-post.html %}
-        <!-- {% include newsletter.html %} -->
-        <!-- {% include comments.html %} -->
       </div>
     </div> <!-- End Wrapper -->
   </article>
-  <!-- {% include search.html %} -->
   {% include footer.html %}
 </div>

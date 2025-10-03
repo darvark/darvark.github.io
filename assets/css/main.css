@@ -82,7 +82,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 1em;
   margin: 0.67em 0;
 }
 
@@ -403,7 +403,7 @@ html, body {
 html {
     line-height: 1.75;
     letter-spacing: 0.002em;
-    font-size: 1.375rem;
+    font-size: 1.1rem;
 }
 body {
   font-family: var(--font1);
@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: var(--font2-regular);
   line-height: 1;
 }
