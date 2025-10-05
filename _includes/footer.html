@@ -1,29 +1,35 @@
-{% include calculate_relative_base.html %}
-{% include escape-404.html %}
+<!-- Footer -->
 
-<footer class="main-footer">
-    <div class="footer-wrapper">
-        <div class="logo-symbol">
-        </div>
-        <div class="copyright">
-          <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
-        </div>
-        <div class="footer-nav">
-            <div>
-                <a href="{{ relativebase }}archive.html">
-                    Posts
-                </a>
-            </div>
-            <div>
-                <a href="{{ relativebase }}tags.html">
-                    Tags
-                </a>
-            </div>
-            <div>
-                <a href="{{ relativebase }}about.html">
-                    About
-                </a>
-            </div>
-        </div>
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          {% if site.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ site.email | encode_email }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/{{ site.facebook_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}<img src="/img/logo.png" alt="PZK"  style="width:50px;height:50px;" ></p>
+      </div>
     </div>
+  </div>
 </footer>
